@@ -8,6 +8,7 @@
 //  организовать промежуточное хранение результата, это относится к пункту меню — вывод результата;
 //  разбить программу на функции.
 
+
 Menu();
 
 int countSymbolInText(string txt) {
@@ -40,21 +41,42 @@ return count;
 void Menu() {
 Console.WriteLine("Menu:\n1-To enter the string\n2-To process the data\n3-To see result\n0-Exit\n");
 int choice = int.Parse(Console.ReadLine());
-string text = " ";
-int res = 0;
+DateTime time = new DateTime();
+string[] text = new string[100];
+int count = 0;
+int[] res = new int[100];
+string[] timeArr = new string[100];
+string r;
 
 while (true) {
   
         switch(choice) {
         case 1:
-            text = Console.ReadLine();
+            Console.Write("Введите строку: ");
+              if(text[count] != null)
+              {
+                count++;
+              }
+            text[count] = Console.ReadLine();
+            time = DateTime.Now;
+            timeArr[count] = time.ToString();
             break;
         case 2:
             Console.WriteLine("Processing the data..\n");
-            res = countSymbolInText(text);
+            for (int i = 0; i <= count; i++)
+            {
+                r = text[i];
+                res[i] = countSymbolInText(r);
+            }
             break;
         case 3:
-            Console.WriteLine ($"{res}");
+            
+           
+            for (int i = 0; i <= count; i++)
+            {
+                Console.WriteLine($"\nСтрока - {text[i]}, введена  {timeArr[i]}");
+                Console.WriteLine ($"Наибольшее количество идущих подряд букв = {res[i]}");
+            }
             break;
         case 0:
             return;
@@ -62,7 +84,8 @@ while (true) {
             Console.WriteLine("\nPlease, enter 0, 1 or 2\n");
             break;
         }
-        Console.WriteLine("\nPlease, enter your choice: ");
+        Console.Write("\nPlease, enter your choice: ");
         choice = int.Parse(Console.ReadLine());
     }
-}  
+}
+    

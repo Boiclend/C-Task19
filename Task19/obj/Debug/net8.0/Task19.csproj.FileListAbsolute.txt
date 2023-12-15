@@ -12,3 +12,4 @@ C:\Users\РомаиЛиля\Desktop\C#Task19\Task19\obj\Debug\net8.0\refint\Task
 C:\Users\РомаиЛиля\Desktop\C#Task19\Task19\obj\Debug\net8.0\Task19.pdb
 C:\Users\РомаиЛиля\Desktop\C#Task19\Task19\obj\Debug\net8.0\Task19.genruntimeconfig.cache
 C:\Users\РомаиЛиля\Desktop\C#Task19\Task19\obj\Debug\net8.0\ref\Task19.dll
+C:\Users\РомаиЛиля\Desktop\C#Task19\Task19\obj\Debug\net8.0\Task19.sourcelink.json
